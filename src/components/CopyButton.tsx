@@ -18,10 +18,19 @@ export function CopyButton({ text }: { text: string }) {
     <button
       type="button"
       onClick={handleCopy}
-      className="inline-flex items-center gap-1.5 rounded-md bg-muted px-3 py-1.5 text-sm text-foreground hover:bg-border transition-colors"
+      className={`group inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${copied ? "bg-success/10 text-success" : "bg-muted text-muted-foreground hover:text-foreground hover:bg-border"}`}
     >
-      {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-      {copied ? t.common.copied : t.common.copy}
+      {copied ? (
+        <>
+          <Check className="h-4 w-4 animate-scale-in" />
+          <span>{t.common.copied}</span>
+        </>
+      ) : (
+        <>
+          <Copy className="h-4 w-4 transition-transform group-hover:scale-110" />
+          <span>{t.common.copy}</span>
+        </>
+      )}
     </button>
   );
 }

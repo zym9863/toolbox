@@ -20,15 +20,19 @@ export function TextArea({
   label,
 }: TextAreaProps) {
   return (
-    <div className={`flex flex-col gap-1.5 ${className}`}>
-      {label && <label className="text-sm font-medium text-muted-foreground">{label}</label>}
+    <div className={`flex flex-col gap-2 ${className}`}>
+      {label && (
+        <label className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+          {label}
+        </label>
+      )}
       <textarea
         value={value}
         onChange={onChange ? (e) => onChange(e.target.value) : undefined}
         placeholder={placeholder}
         readOnly={readOnly}
         rows={rows}
-        className="w-full rounded-lg border border-border bg-card p-3 font-mono text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-y"
+        className={`w-full rounded-xl border border-border bg-surface-1 p-4 font-mono text-sm leading-relaxed text-foreground placeholder:text-muted-foreground/60 transition-all duration-200 hover:border-muted-foreground/30 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-y ${readOnly ? "cursor-default bg-surface-2" : ""}`}
       />
     </div>
   );

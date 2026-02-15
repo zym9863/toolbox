@@ -2,12 +2,13 @@ const en = {
   common: {
     search: "Search tools...",
     copy: "Copy",
-    copied: "Copied",
+    copied: "Copied!",
     clear: "Clear",
     input: "Input",
     output: "Output",
     download: "Download",
     upload: "Upload file",
+    dragDrop: "Drag and drop or click to upload",
     generate: "Generate",
     convert: "Convert",
     format: "Format",
@@ -17,6 +18,7 @@ const en = {
     lightMode: "Light Mode",
     home: "Home",
     toolCount: "tools",
+    welcome: "Welcome to Toolbox",
   },
 } satisfies Record<string, Record<string, string>>;
 
