@@ -5,7 +5,7 @@ import type { Locale } from "@/tools/types";
 import zh from "./locales/zh";
 import en from "./locales/en";
 
-const dictionaries = { zh, en } as const;
+const dictionaries = { zh, en };
 
 type Dictionary = typeof zh;
 

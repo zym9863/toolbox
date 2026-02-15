@@ -9,7 +9,7 @@ import { useI18n } from "@/i18n";
 import { Home } from "lucide-react";
 
 function getIcon(name: string): LucideIcon {
-  return (Icons as Record<string, LucideIcon>)[name] ?? Icons.Box;
+  return (Icons as unknown as Record<string, LucideIcon>)[name] ?? Icons.Box;
 }
 
 interface SidebarProps {

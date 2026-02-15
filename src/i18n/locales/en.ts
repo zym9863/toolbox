@@ -18,6 +18,6 @@ const en = {
     home: "Home",
     toolCount: "tools",
   },
-} as const;
+} satisfies Record<string, Record<string, string>>;
 
 export default en;

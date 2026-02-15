@@ -10,7 +10,7 @@ import { searchTools, getToolsByCategory } from "@/tools/registry";
 import { useI18n } from "@/i18n";
 
 function getIcon(name: string): LucideIcon {
-  return (Icons as Record<string, LucideIcon>)[name] ?? Icons.Box;
+  return (Icons as unknown as Record<string, LucideIcon>)[name] ?? Icons.Box;
 }
 
 export default function HomePage() {

@@ -18,6 +18,6 @@ const zh = {
     home: "首页",
     toolCount: "个工具",
   },
-} as const;
+} satisfies Record<string, Record<string, string>>;
 
 export default zh;
