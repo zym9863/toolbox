@@ -13,7 +13,7 @@
     "ajv": "^8.18.0",
     "bcryptjs": "^3.0.3",
     "diff": "^8.0.3",
-    "fast-xml-parser": "^5.3.6",
+    "fast-xml-parser": "^5.3.8",
     "html-to-image": "^1.11.13",
     "js-md5": "^0.8.3",
     "jsbarcode": "^3.12.3",
